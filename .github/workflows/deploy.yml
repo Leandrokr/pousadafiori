@@ -30,12 +30,21 @@ jobs:
           ls -la
           
       - name: Deploy to Hostgator
-        uses: wlixcc/SFTP-Deploy-Action@v1.2.4
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.4
         with:
-          username: ${{ secrets.FTP_USERNAME }}
-          server: ${{ secrets.FTP_SERVER }}
-          ssh_private_key: ${{ secrets.FTP_PASSWORD }}
-          local_path: './dist/*'
-          remote_path: 'public_html/'
-          delete_remote: true
-          sftp_args: '-o StrictHostKeyChecking=no' 
+          server: ftp.inovaforma.com.br
+          username: leandrokr@pousadafiori.kriex.com.br
+          password: ${{ secrets.FTP_PASSWORD }}
+          local-dir: ./dist/
+          server-dir: /home1/inova106/pousadafiori.kriex.com.br/leandrokr/
+          dangerous-clean-slate: true
+          exclude: |
+            **/.git*
+            **/.git*/**
+            **/node_modules/**
+            **/.env
+            **/.env.*
+            **/.env.local
+            **/.env.*.local
+          log-level: verbose
+          timeout: 100000 
