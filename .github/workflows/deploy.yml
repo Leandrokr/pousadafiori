@@ -23,7 +23,21 @@ jobs:
         run: npm run build
         
       - name: List Build Directory
-        run: ls -la dist/
+        run: |
+          echo "Contents of dist directory:"
+          ls -la dist/
+          echo "Contents of current directory:"
+          ls -la
+          
+      - name: Test FTP Connection
+        run: |
+          echo "Testing FTP connection..."
+          ftp -n ${{ secrets.FTP_SERVER }} << EOF
+          user ${{ secrets.FTP_USERNAME }} ${{ secrets.FTP_PASSWORD }}
+          pwd
+          ls
+          quit
+          EOF
         
       - name: Deploy to Hostgator
         uses: SamKirkland/FTP-Deploy-Action@v4.3.4
