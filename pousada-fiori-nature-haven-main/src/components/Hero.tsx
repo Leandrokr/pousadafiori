@@ -31,20 +31,20 @@ const Hero = () => {
           
           <AnimateOnScroll animation="fade-in-up" delay={500}>
             <h1 className="text-4xl md:text-5xl lg:text-6xl text-white font-serif font-semibold leading-tight mb-4">
-              Um paraíso natural para renovar suas energias
+              Um refúgio de bem-estar em meio à natureza
             </h1>
           </AnimateOnScroll>
           
           <AnimateOnScroll animation="fade-in-up" delay={700}>
             <p className="text-lg md:text-xl text-fiori-light font-light mb-8 leading-relaxed max-w-xl">
-              Descubra a perfeita harmonia entre conforto e natureza em uma experiência única na Pousada Fiori.
+              Descubra a perfeita harmonia entre conforto, relaxamento e natureza. Hospedagem exclusiva e SPA para uma experiência única de renovação na Pousada Fiori.
             </p>
           </AnimateOnScroll>
           
           <AnimateOnScroll animation="fade-in-up" delay={900}>
             <div className="flex flex-col sm:flex-row gap-4">
-              <a href="#acomodações" className="button-primary text-center">Conheça nossas acomodações</a>
-              <a href="#contato" className="button-secondary text-center">Reservar agora</a>
+              <a href="#acomodações" className="button-primary text-center">Conheça nossas suítes</a>
+              <a href="#spa" className="button-secondary text-center">Visite nosso SPA</a>
             </div>
           </AnimateOnScroll>
         </div>

@@ -70,6 +70,6 @@ export const siteImages = {
   
   // Outros elementos do site
   contact: {
-    whatsapp: "https://cdn.pixabay.com/photo/2021/10/09/12/45/whatsapp-6694419_1280.png"
+    whatsapp: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/WhatsApp.svg/1200px-WhatsApp.svg.png"
   }
 };

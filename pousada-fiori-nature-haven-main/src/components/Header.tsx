@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from 'react';
 import { cn } from '@/lib/utils';
 
@@ -42,7 +41,7 @@ const Header = () => {
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center space-x-8">
-          {['Início', 'Acomodações', 'Sobre', 'Contato'].map((item) => (
+          {['Início', 'Acomodações', 'SPA', 'Sobre', 'Contato'].map((item) => (
             <a
               key={item}
               href={`#${item.toLowerCase()}`}
@@ -94,7 +93,7 @@ const Header = () => {
         )}
       >
         <nav className="flex flex-col space-y-6 items-center">
-          {['Início', 'Acomodações', 'Sobre', 'Contato'].map((item) => (
+          {['Início', 'Acomodações', 'SPA', 'Sobre', 'Contato'].map((item) => (
             <a
               key={item}
               href={`#${item.toLowerCase()}`}
